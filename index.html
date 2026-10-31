@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#124d43">
+  <meta name="description" content="用蒙小智管安全，不做企业背锅人。蒙小智生产企业注册安全工程师助理平台首页演示。">
+  <title>蒙小智 · 安全总监工作台</title>
+  <link rel="icon" type="image/svg+xml" href="assets/brand.svg">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/operations.css">
+  <link rel="stylesheet" href="assets/compliance.css">
+  <link rel="stylesheet" href="assets/graph-spatial.css">
+  <link rel="stylesheet" href="assets/local-workspace.css">
+  <link rel="stylesheet" href="assets/ui-refresh.css">
+  <link rel="stylesheet" href="assets/graph-explorer.css">
+  <link rel="stylesheet" href="assets/facility-screen.css">
+  <script src="assets/vendor/pixoffice-path.js" defer></script>
+  <script src="assets/facility-screen.js" defer></script>
+  <script src="assets/archive-data.js" defer></script>
+  <script src="assets/archives.js" defer></script>
+  <script src="assets/app.js" defer></script>
+  <script src="assets/operations.js" defer></script>
+  <script src="assets/compliance.js" defer></script>
+  <script src="assets/graph-model.js" defer></script>
+  <script src="assets/graph-explorer.js" defer></script>
+  <script src="assets/local-workspace.js" defer></script>
+  <script src="assets/ui-refresh.js" defer></script>
+<script src="demo-data.js"></script><script>if(!location.hash)location.hash="facility";</script></head>
+<body>
+  <a class="skip-link" href="#main">跳转到工作区</a>
+  <div class="sidebar-scrim" data-action="close-nav"></div>
+  <aside class="sidebar" aria-label="主导航">
+    <a class="brand" href="#home" aria-label="蒙小智首页">
+      <img src="assets/brand.svg" alt="" width="42" height="42">
+      <span><strong>蒙小智</strong><small>您的专属安全助理</small></span>
+    </a>
+    <button class="enterprise-switch" data-action="enterprise"><span class="enterprise-icon" data-icon="building"></span><span><b>北疆化工 · 演示企业</b><small>内蒙古 · 鄂尔多斯市</small></span><i data-icon="chevrons"></i></button>
+    <div class="nav-label">工作空间 <span>WORKSPACE</span></div>
+    <nav>
+      <a href="#home" class="nav-item active" data-nav="home"><i data-icon="dashboard"></i><span>互动工作台</span><span class="nav-dot"></span></a>
+      <a href="#enterprise" class="nav-item" data-nav="enterprise"><i data-icon="building"></i><span>企业资料</span></a>
+      <a href="#regulations" class="nav-item" data-nav="regulations"><i data-icon="book"></i><span>法规与监管资料</span><span class="nav-count">2</span></a>
+      <a href="#duties" class="nav-item" data-nav="duties"><i data-icon="chart"></i><span>履职展示</span></a>
+      <a href="#archives" class="nav-item" data-nav="archives"><i data-icon="folder"></i><span>标准化档案</span></a>
+      <a href="#graph" class="nav-item" data-nav="graph"><i data-icon="graph"></i><span>合规关系图谱</span><span class="soon-tag">新</span></a>
+      <a href="#reporting" class="nav-item" data-nav="reporting"><i data-icon="upload"></i><span>监管上报</span><span class="nav-count">4</span></a>
+    </nav>
+    <div class="nav-divider"></div>
+    <div class="nav-label">现场管理</div>
+    <a href="#facility" class="nav-item" data-nav="facility"><i data-icon="building"></i><span>企业动态沙盘</span><span class="soon-tag">新</span></a>
+    <a href="#scene" class="nav-item" data-nav="scene"><i data-icon="location"></i><span>今日现场</span><span class="soon-tag">展示</span></a>
+    <div class="sidebar-bottom">
+      <div class="assistant-status"><span class="little-orbit" data-icon="sparkles"></span><b>有据可查，从容履职。</b><p>让每一份投入<br>成为看得见的安全行动。</p><span class="status-line"><span></span> 蒙小智 · 与您同行</span></div>
+      <button class="sidebar-help" data-action="guide"><i data-icon="help"></i> 使用指南 <i data-icon="arrow-up-right"></i></button>
+      <div class="sidebar-version">MENG XIAO ZHI <span>工作台预览 V1.3</span></div>
+    </div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar">
+      <div class="topbar-left"><button class="icon-btn menu-btn" data-action="menu" aria-label="展开导航"><i data-icon="menu"></i></button><span class="topbar-symbol" data-icon="shield"></span><span class="platform-name">蒙小智生产企业注册安全工程师助理平台</span></div>
+      <div class="topbar-right"><span class="demo-badge"><span></span> 演示工作空间</span><button class="icon-btn notification-btn" data-action="notifications" aria-label="查看通知"><i data-icon="bell"></i><span></span></button><button class="profile-btn" data-action="profile" aria-label="修改用户称呼"><span class="avatar" id="avatar">张</span><span class="profile-name" id="profile-name">张明</span><i data-icon="chevron-down"></i></button></div>
+    </header>
+    <main id="main" tabindex="-1">
+      <div id="page-content"></div>
+      <footer class="page-footer"><span><img src="assets/brand.svg" alt="" width="17" height="17"> 蒙小智 · 让安全管理心中有数</span><small>当前为交互演示，企业、任务及统计均为示例数据。</small></footer>
+    </main>
+  </div>
+  <dialog id="modal" aria-labelledby="modal-title"><div id="modal-content"></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+<style>.wd-portal{position:fixed!important;left:14px;bottom:12px;z-index:99999;font:12px/1.6 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif!important;color:#15353d!important;background:#fff!important;border:1px solid #d6e2e3;border-radius:12px;box-shadow:0 4px 20px #152f3b22;max-width:245px}.wd-portal summary{cursor:pointer;padding:10px 14px;list-style:none;font-weight:650}.wd-portal summary::before{content:"✦ ";color:#3265f5}.wd-portal nav{display:grid;padding:0 10px 10px}.wd-portal a{display:block!important;text-decoration:none;color:#244458!important;padding:8px;border-radius:6px}.wd-portal a:hover{background:#eef3ff}.wd-portal small{display:block;padding:0 18px 10px;color:#6c7c82!important;font-size:10px}</style><details class="wd-portal"><summary>蔚动星辰 · 项目导航 ↗</summary><nav><a href="https://wwwlove3921-tech.github.io/weidong-xingchen/">蔚动星辰官网 →</a><a href="https://wwwlove3921-tech.github.io/mengxiaozhi-demo/">蒙小智 · 安全工作台 →</a><a href="https://wwwlove3921-tech.github.io/niuniu-electrical-demo/">牛牛电气 · 三维配电室 →</a><a href="https://wwwlove3921-tech.github.io/ammonia-island-lab/">氨岛实验室 · 合成氨课堂 →</a></nav><small>公开演示 · 操作与数据仅供体验</small></details></body>
+</html>
